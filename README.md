@@ -31,7 +31,7 @@ This operator transforms the items emitted by an Observable by applying a functi
 This operator transforms each item emitted by an Observable but instead of returning the modified item, it returns the Observable itself which can emit data again
 
       ```
- var intList = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
+       var intList = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
 
         var firstObservable = Observable.create(ObservableOnSubscribe<Int> {
             for (i in 0..intList.size) it.onNext(i)
@@ -49,10 +49,9 @@ This operator transforms each item emitted by an Observable but instead of retur
             override fun onError(e: Throwable) {}
 
         })
-        
         ```
         ```
- private fun getSecondObservable(int: Int): Observable<Int> {
+        fun getSecondObservable(int: Int): Observable<Int> {
 
         var secondObservable =
             Observable.create(ObservableOnSubscribe<Int> { emitter -> emitter.onNext(int) })
