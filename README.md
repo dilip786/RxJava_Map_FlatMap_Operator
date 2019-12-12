@@ -49,8 +49,7 @@ This operator transforms each item emitted by an Observable but instead of retur
             override fun onError(e: Throwable) {}
 
         })
-        ```
-        ```
+        
         fun getSecondObservable(int: Int): Observable<Int> {
 
         var secondObservable =
