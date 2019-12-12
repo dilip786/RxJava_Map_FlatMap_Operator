@@ -2,6 +2,19 @@
 
 A simple android demo that demonstrates RxJava Map & FlatMap operators.
 
+```
+We need following dependencies for this project. Add the lines below to your app/build.gradle in your app project under dependencies.
+
+def rxjava_version ="2.1.8"
+def rxandroid_version = "2.0.1"
+dependencies 
+{
+	implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+	implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+}
+
+```
+
 #### Map Operator
 
 This operator transforms the items emitted by an Observable by applying a function to each item. map() operator allows for us to modify the emitted item from the Observable and then emits the modified item.
