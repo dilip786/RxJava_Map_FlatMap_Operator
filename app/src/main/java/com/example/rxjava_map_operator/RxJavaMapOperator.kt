@@ -48,7 +48,6 @@ class RxJavaMapOperator : AppCompatActivity() {
      */
     private fun getFlatMapObservable() {
 
-        // Initialising first Observable, this will emit the integers
         var intList = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
 
         var firstObservable = Observable.create(ObservableOnSubscribe<Int> {
@@ -72,7 +71,6 @@ class RxJavaMapOperator : AppCompatActivity() {
     }
 
     private fun getSecondObservable(int: Int): Observable<Int> {
-        // Initialising Second Observable, Calling this from firstObservable FlatMap
 
         var secondObservable =
             Observable.create(ObservableOnSubscribe<Int> { emitter -> emitter.onNext(int) })
